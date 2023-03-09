@@ -13,17 +13,17 @@ class Contact
 	std::string secret;
 
 	public:
-	int add_function();
+	int add_function(int i);
 	std::string get_first_name();
 	std::string get_name();
 	std::string get_number();
 	std::string get_nickname();
 	std::string get_secret();
-	void set_first_name(std::string);
-	void set_name(std::string);
-	void set_number(std::string);
-	void set_nickname(std::string);
-	void set_secret(std::string);
+	int set_first_name(std::string);
+	int set_name(std::string);
+	int set_number(std::string);
+	int set_nickname(std::string);
+	int set_secret(std::string);
 };
 
 #endif

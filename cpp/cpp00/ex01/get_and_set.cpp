@@ -6,7 +6,7 @@
 /*   By: ctardy <ctardy@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:39:48 by ctardy            #+#    #+#             */
-/*   Updated: 2023/03/08 19:05:52 by ctardy           ###   ########.fr       */
+/*   Updated: 2023/03/09 17:57:05 by ctardy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,32 +42,58 @@ std::string Contact::get_secret()
 // set_functions ------------------------------------
 
 
-void Contact::set_first_name(std::string name)
-{
+int Contact::set_first_name(std::string name)
+{	
+	if (name.empty())
+		return error_msg();
 	this->first_name = name;
-	return; 
+	return 0; 
 }
 
-void Contact::set_name(std::string name)
+int Contact::set_name(std::string name)
 {
+	if (name.empty())
+		return error_msg();
 	this->name = name;
-	return; 
+	return 0; 
 }
 
-void Contact::set_nickname(std::string name)
+int Contact::set_nickname(std::string name)
 {
+	if (name.empty())
+		return error_msg();
 	this->nickname = name;
-	return; 
+	return 0; 
 }
 
-void Contact::set_number(std::string name)
+int Contact::set_number(std::string name)
 {
+	if (name.empty())
+		return error_msg();
+	for (int i = 0; i < name.length() ; i++) {
+		if (!isdigit(name[i]))
+		{
+			type_text("🔢 \033[31mVeuillez rentrer 10 caractères numériques\033[37m", 1);
+			return -1;
+		}
+	}
+	if (name.length() < 10) {
+		type_text("🔢 \033[31mVotre numéro doit comporter 10 chiffres\033[37m", 1);
+		return -1;
+	}
 	this->number = name;
-	return; 
+	return 0; 
 }
 
-void Contact::set_secret(std::string name)
+int Contact::set_secret(std::string name)
 {
+	if (name.empty())
+		return error_msg();
 	this->secret = name;
-	return; 
+	int a = (name.compare("Le correcteur sens tres bon"));
+	if (a == 0)
+	{
+		type_text("\033[38;5;208mCe n'est pas vraiment un secret ça ... 😳\033[37m", 1);
+	}
+	return 0; 
 }
