@@ -6,7 +6,7 @@
 /*   By: ctardy <ctardy@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:12:58 by ctardy            #+#    #+#             */
-/*   Updated: 2023/03/13 13:33:17 by ctardy           ###   ########.fr       */
+/*   Updated: 2023/03/13 18:04:39 by ctardy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int parsing_catchh(std::string str)
 {
 	if ((str[0] < 48 || str[0] > 56) || str.length() != 1)
 	{
-		type_text("🤖 \033[31mVeuillez rentrez un index numérique entre 1 et 8 compris svp\033[37m", 1);
+		type_text("🤖 \033[31mVeuillez rentrez un index numérique entre 1 et 8 compris\033[37m", 1);
 		return -1;
 	}
 	return 0;
@@ -96,4 +96,5 @@ int PhoneBook::send_to_phbk(Contact Oui)
 	this->TabContacts[i] = Oui;
 	this->set_index(1);
 	return 0;
+
 }
