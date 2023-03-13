@@ -13,12 +13,15 @@ class Contact
 	std::string secret;
 
 	public:
+	
 	int add_function(int i);
+
 	std::string get_first_name();
 	std::string get_name();
 	std::string get_number();
 	std::string get_nickname();
 	std::string get_secret();
+	
 	int set_first_name(std::string);
 	int set_name(std::string);
 	int set_number(std::string);

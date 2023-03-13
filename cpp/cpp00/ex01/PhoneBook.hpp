@@ -1,14 +1,17 @@
 #ifndef PHONE_BOOK_HPP
 # define PHONE_BOOK_HPP
-
+# include "Contact.hpp"
 class PhoneBook
 {
 	private:
-	std::string TabContacts[8];
+	int i;
+	class Contact TabContacts[8];
 
 	public:
-	PhoneBook();
-	~PhoneBook();
+	int	send_to_phbk(class Contact);
+	void print_contact();
+	int get_index();
+	void set_index(int flag);
 
 };
 

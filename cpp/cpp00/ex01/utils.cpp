@@ -6,7 +6,7 @@
 /*   By: ctardy <ctardy@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 16:45:01 by ctardy            #+#    #+#             */
-/*   Updated: 2023/03/09 18:20:45 by ctardy           ###   ########.fr       */
+/*   Updated: 2023/03/13 13:32:01 by ctardy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,21 +59,21 @@ int type_text(std::string text, int flag)
 	std::cout << "\n" << std::flush;
 	return 2;
 }
-// void loop_com()
-// {
-// 	int loop;
-// 	while (loop < 5)
-// 	{
-// 			std::cout << "\b" << std::flush;
-// 			std::cout << "\b" << std::flush;
-// 			std::cout << " " << std::flush;
-// 			std::cout << "\033[1C" << std::flush;
-// 			usleep(150000);
-// 			std::cout << "\b" << std::flush;
-// 			std::cout << "\b" << std::flush;
-// 			std::cout << ':' << std::flush;
-// 			std::cout << "\033[1C" << std::flush;
-// 			usleep(150000);
-// 			loop++;
-// 	}
-// }
+void loop_com()
+{
+	int loop;
+	while (loop < 5)
+	{
+			std::cout << "\b" << std::flush;
+			std::cout << "\b" << std::flush;
+			std::cout << " " << std::flush;
+			std::cout << "\033[1C" << std::flush;
+			usleep(150000);
+			std::cout << "\b" << std::flush;
+			std::cout << "\b" << std::flush;
+			std::cout << ':' << std::flush;
+			std::cout << "\033[1C" << std::flush;
+			usleep(150000);
+			loop++;
+	}
+}

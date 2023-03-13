@@ -1,9 +1,9 @@
-NAME 	= phonebook		
-SRCS 	= PhoneBook.cpp Contact.cpp get_and_set.cpp utils.cpp main.cpp
+NAME 	= account		
+SRCS 	= test.cpp Account.cpp
 OBJS 	= ${SRCS:.cpp=.o}
 CC		= c++
-CFLAGS	= -Wall -Werror -Wextra -std=c++98
-INCLUDES = PhoneBook.hpp Contact.hpp main.hpp
+CFLAGS	= -Wall -Werror -Wextra -std=c++98 
+INCLUDES = Account.hpp
 
 .c.o: 
 				${CC} ${CFLAGS} -c $< -o ${<:.cpp=.o}
@@ -13,7 +13,7 @@ all			:	${NAME}
 ${NAME} 	:	${OBJS}
 				@echo "\033[32m\n🧠 Compiling ... \n\033[33;1m"
 				@$(CC) ${OBJS} -o ${NAME}
-				@echo "\033[32m📄 ex01 Compiled !\n"
+				@echo "\033[32m📄 ex02 Compiled !\n"
 
 clean		:	
 				@echo "\033[32m\n🧻 Clean ... \n\033[33;1m"
